@@ -54,13 +54,15 @@
 void farr(int a)
 {
    int[] arr = new int[a];
+   Console.WriteLine("Введите элементы массива: ");
 for (int i = 0; i < arr.Length; i++)
 {
-    arr[i] = new Random().Next(0, 100);
-Console.WriteLine(arr[i]);
+    arr[i] = Convert.ToInt32(Console.ReadLine());
+
 }
+Console.WriteLine($"[{string.Join(", ", arr)}]");
 }
-Console.Write("Введите число a: ");
+Console.Write("Введите длинну массива: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 farr(a);
